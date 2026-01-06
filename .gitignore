@@ -1,0 +1,17 @@
+# Virtual environment
+venv/
+.env/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter / logs
+.ipynb_checkpoints/
+
+# Model files (too large)
+*.h5
+
+# OS files
+.DS_Store
+Thumbs.db
