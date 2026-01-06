@@ -21,30 +21,43 @@ Web-based interface for real-time predictions
 🦠 Disease Classes
 
 Brown Spot
+
 Leaf Blast
+
 Leaf Scald
+
 Sheath Blight
+
 Healthy
 
 ⚙️ Technologies Used
 
 Python
+
 TensorFlow / Keras
+
 OpenCV
+
 NumPy, Pandas
+
 Streamlit (for web interface)
 
 📊 Model Highlights
 
 Transfer learning–based CNN architecture
+
 Data augmentation for improved generalization
+
 Achieved high validation accuracy on test samples
+
 Optimized for real-time inference
 
 📁 Dataset Information
 
 The dataset used in this project was compiled from multiple publicly available online sources for academic and learning purposes.
+
 Due to the aggregated nature of the data and repository size constraints, the dataset is not included in this repository.
+
 The dataset contains rice leaf images categorized into five classes as listed above.
 This project primarily focuses on model design, training workflow, and end-to-end system integration rather than dataset creation.
 
@@ -55,13 +68,14 @@ streamlit run app.py
 🚀 Future Enhancements
 
 Use standardized benchmark datasets
+
 Improve model robustness with larger datasets
+
 Deploy as a cloud-based application
+
 Add multilingual farmer support
 
 👩‍💻 Author
 
 Ponnala Vikasni Reddy
 Final-year Computer Science undergraduate
-
-That README alone already makes your repo look 10x more professional.
