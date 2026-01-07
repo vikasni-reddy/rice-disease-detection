@@ -8,15 +8,29 @@ from PIL import Image
 import json
 import datetime
 import plotly.graph_objects as go
+import os
+import gdown
+
 
 # ---------------------- Load Model ----------------------
 @st.cache_resource
 def load_model_and_classes():
-    model = load_model('best_model.h5')
-    with open('class_indices.json', 'r') as f:
+    MODEL_PATH = "best_model.h5"
+    MODEL_URL = "https://drive.google.com/uc?id=1O4KC7l0jzyZkrUsrWKX-KWGfVCzy7W2v"
+
+    # Download model if not present
+    if not os.path.exists(MODEL_PATH):
+        with st.spinner("⬇️ Downloading model (one-time)..."):
+            gdown.download(MODEL_URL, MODEL_PATH, quiet=False)
+
+    model = load_model(MODEL_PATH)
+
+    with open("class_indices.json", "r") as f:
         class_indices = json.load(f)
+
     class_names = {v: k for k, v in class_indices.items()}
     return model, class_names
+
 
 # ---------------------- Preprocessing ----------------------
 # NOTE: This preprocessing matches training that used rescale=1./255.
@@ -409,3 +423,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
