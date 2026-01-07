@@ -12,7 +12,7 @@ import plotly.graph_objects as go
 # ---------------------- Load Model ----------------------
 @st.cache_resource
 def load_model_and_classes():
-    model = load_model('rice_disease_model.h5')
+    model = load_model('best_model.h5')
     with open('class_indices.json', 'r') as f:
         class_indices = json.load(f)
     class_names = {v: k for k, v in class_indices.items()}
@@ -407,4 +407,5 @@ def main():
     """, unsafe_allow_html=True)
 
 if __name__ == "__main__":
+
     main()
